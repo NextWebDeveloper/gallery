@@ -1,0 +1,114 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.d-flex
+	display: flex
+
+h1,h2,h3,h4 
+	font-family: "merriweather-exa", sans-serif	
+
+#navbarHead
+	display: none
+	background-color: #343a40
+	color: white	
+	padding-top: 1em
+	.some-information
+		color: #6c757d
+	.social
+		list-style-type: none
+		padding: 0
+		li a
+			color: white
+nav
+	background-color: #343a40
+	.navbar
+		padding: 10px 0
+		justify-content: space-between
+		font-size: 1.25rem
+		a
+			color: white
+		.navbar-icon
+			display: flex
+			align-items: center
+			strong
+				margin-left: 10px
+.promo
+	background-color: #fff	
+	text-align: center
+	height: 300px
+	box-sizing: border-box
+	display: flex
+	align-items: center
+	.promo-text
+		font-size: 1.25rem
+		h1 
+			text-transform: uppercase
+
+.cards
+	background-color: darken(#f8f9fa, 5%)
+	padding: 50px 0
+	.card
+		border: 1px solid grey
+		border-radius: 5px
+		margin-bottom: 1.5rem
+		.card-img
+			width: 100%	
+		.card-body
+			padding: 5px 15px
+			.card-footer
+				display: flex
+				justify-content: space-between
+.footer-panel
+	padding-top: 1.5rem
+	display: flex
+	justify-content: space-between
+	.back-to-top a
+		display: block
+		width: 120px
+		border: 1px solid grey
+		border-radius: 5px
+		padding-left: 10px
+@media screen and (max-width:768px)
+	.footer-panel
+		flex-direction: column
+
+
+
+@import "media" // Always at the end
